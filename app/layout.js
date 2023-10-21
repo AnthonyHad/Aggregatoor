@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <Sidebar />
         <div className="w-full">
           <PriceRow />
-          <div className="w-3/4 mx-auto mt-7">{children}</div>
+          <div className=" w-11/12 mx-auto mt-7">{children}</div>
         </div>
       </body>
     </html>
