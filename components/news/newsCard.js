@@ -1,6 +1,6 @@
 const NewsCard = () => {
   return (
-    <div className="border border-white rounded-md  w-full h-[270px]">
+    <div className="border border-white rounded-md  w-full h-[270px] ">
       <div className="flex flex-col gap-3 justify-end h-full p-4">
         <div>SourceImage</div>
         <h3>Title</h3>
