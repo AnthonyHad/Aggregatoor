@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/navigation/sidebar";
 import PriceRow from "@/components/elements/priceRow";
+import Footer from "@/components/navigation/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,11 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-slate-900 text-zinc-50">
-      <body className={`${inter.className} flex min-h-screen`}>
+      <body className={`${nunito.className} flex min-h-screen`}>
         <Sidebar />
         <div className="w-full">
           <PriceRow />
           <div className=" w-11/12 mx-auto mt-7">{children}</div>
+          <Footer />
         </div>
       </body>
     </html>
