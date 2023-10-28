@@ -31,16 +31,19 @@ const Sidebar = () => {
     <>
       <div
         className={`w-40 border-r ${
-          isSidebarVisible ? "" : "hidden"
-        } flex flex-col items-center`}
+          isSidebarVisible ? "" : "hidden "
+        } flex flex-col items-center `}
       >
         {window.innerWidth <= 600 && (
-          <button onClick={toggleSidebar} className="mb-2">
+          <button onClick={toggleSidebar} className="m-2">
             <X />
           </button>
         )}
 
-        <div className="sticky top-0 space-y-4 flex flex-col items-center">
+        <div
+          className="sticky top-0 space-y-4 flex flex-col items-center
+        p-2"
+        >
           <div className="mt-8">Image is here</div>
           <h1 className="text-xl font-semibold">Aggregatoor</h1>
           <ul>
