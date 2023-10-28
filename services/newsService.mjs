@@ -1,4 +1,5 @@
 import Parser from "rss-parser";
+import { sourceLogos } from "@/utils/sourceLogos";
 // import fs from 'fs';
 
 const parser = new Parser();
@@ -18,6 +19,7 @@ export const fetchNewsFromFeeds = async () => {
           pubDate: new Date(item.pubDate).getTime(),
           contentSnippet: item.contentSnippet,
           source: feed.title,
+          logo: sourceLogos[feed.title] || "",
         };
 
         if (item.hasOwnProperty("summary")) {
