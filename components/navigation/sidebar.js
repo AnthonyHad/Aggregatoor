@@ -56,7 +56,7 @@ const Sidebar = () => {
       </div>
       <div>
         {!isSidebarVisible && (
-          <button onClick={toggleSidebar}>
+          <button onClick={toggleSidebar} className="m-1">
             <MenuSquare />
           </button>
         )}
