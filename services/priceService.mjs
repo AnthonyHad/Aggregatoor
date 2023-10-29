@@ -13,5 +13,3 @@ export const fetchPrices = async () => {
 
   return prices;
 };
-
-fetchPrices();
