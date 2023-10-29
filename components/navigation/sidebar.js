@@ -34,7 +34,7 @@ const Sidebar = () => {
           isSidebarVisible ? "" : "hidden "
         } flex flex-col items-center `}
       >
-        {window.innerWidth <= 600 && (
+        {typeof window !== "undefined" && window.innerWidth <= 600 && (
           <button onClick={toggleSidebar} className="m-2">
             <X />
           </button>
