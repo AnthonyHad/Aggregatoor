@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const PriceRow = () => {
+const PriceRow = async () => {
   return (
     <div className="flex mx-2 space-x-4 sticky top-0 left-0 right-0 bg-opacity-50 backdrop-blur-sm">
       <div className="flex space-x-1 items-center">
