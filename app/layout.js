@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-gray-950 text-gray-300">
       <body className={`${nunito.className} flex min-h-screen`}>
         <Sidebar />
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <PriceRow />
           <div className=" w-11/12 mx-auto mt-7">{children}</div>
           <Footer />
