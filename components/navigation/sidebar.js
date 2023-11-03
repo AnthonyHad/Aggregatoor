@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Newspaper, MenuSquare, X } from "lucide-react";
+import Image from "next/image";
 
 const Sidebar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
@@ -44,7 +45,15 @@ const Sidebar = () => {
           className="sticky top-0 space-y-4 flex flex-col items-center
         p-2"
         >
-          <div className="mt-8">Image is here</div>
+          <div className="mt-8">
+            <Image
+              src={"/test-logo.jpg"}
+              width={50}
+              height={50}
+              alt={"logo"}
+              className="rounded-lg object-contain"
+            />
+          </div>
           <h1 className="text-xl font-semibold">Aggregatoor</h1>
           <ul>
             <li className="flex items-center gap-1">
