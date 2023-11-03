@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Newspaper, MenuSquare, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sidebar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
@@ -59,16 +60,26 @@ const Sidebar = () => {
           <h1 className="text-xl font-semibold">Aggregatoor</h1>
           <ul>
             {pathname === "/" ? (
-              <li className="flex items-center gap-1 bg-slate-600 rounded-md p-1 ">
-                <Newspaper size={16} />
-                All News
-              </li>
+              <Link href="/">
+                <li className="flex items-center gap-1 bg-slate-600 rounded-md p-1 ">
+                  <Newspaper size={16} />
+                  All News
+                </li>{" "}
+              </Link>
             ) : (
-              <li className="flex items-center gap-1">
-                <Newspaper size={16} />
-                All News
-              </li>
+              <Link href="/">
+                <li className="flex items-center gap-1">
+                  <Newspaper size={16} />
+                  All News
+                </li>
+              </Link>
             )}
+            <Link href="/decrypt">
+              <li className="flex items-center gap-1 p-1 ">Decrypt</li>{" "}
+            </Link>
+            <Link href="/blockworks">
+              <li className="flex items-center gap-1 p-1 ">Blockworks</li>
+            </Link>
           </ul>
         </div>
       </div>
