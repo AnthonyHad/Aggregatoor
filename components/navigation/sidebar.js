@@ -5,6 +5,25 @@ import { Newspaper, MenuSquare, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const generateLinks = (pathname) => {
+  const links = [
+    { href: "/decrypt", text: "Decrypt" },
+    { href: "/blockworks", text: "Blockworks" },
+  ];
+
+  return links.map((link, index) => (
+    <Link key={index} href={link.href}>
+      <li
+        className={`flex items-center justify-center p-1 ${
+          pathname === link.href ? "bg-slate-600 rounded-md" : ""
+        }`}
+      >
+        {link.text}
+      </li>
+    </Link>
+  ));
+};
+
 const Sidebar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   const pathname = usePathname();
@@ -68,18 +87,13 @@ const Sidebar = () => {
               </Link>
             ) : (
               <Link href="/">
-                <li className="flex items-center gap-1">
+                <li className="flex items-center gap-1 p-1">
                   <Newspaper size={16} />
                   All News
                 </li>
               </Link>
             )}
-            <Link href="/decrypt">
-              <li className="flex items-center gap-1 p-1 ">Decrypt</li>{" "}
-            </Link>
-            <Link href="/blockworks">
-              <li className="flex items-center gap-1 p-1 ">Blockworks</li>
-            </Link>
+            {generateLinks(pathname)}
           </ul>
         </div>
       </div>
