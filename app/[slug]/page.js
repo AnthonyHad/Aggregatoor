@@ -8,22 +8,18 @@ const FilteredNews = async ({ params }) => {
   });
   const feeds = await response.json();
 
-  let capitalParams =
-    params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
+  // let capitalParams =
+  //   params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
 
-  console.log(capitalParams);
-
-  if (capitalParams === "Blockworks") {
-    console.log("I am here");
-    capitalParams = "Blockworks: News and insights about digital assets.";
+  if (params.slug === "Blockworks") {
+    params.slug = "Blockworks: News and insights about digital assets.";
   }
-
-  console.log(capitalParams);
+  console.log(params);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-y-6 gap-x-4 sm:overflow-x-clip">
       {feeds
-        .filter((item) => item.source === capitalParams)
+        .filter((item) => item.source === params.slug)
         .map((item) => (
           <NewsCard
             key={item.id}

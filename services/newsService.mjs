@@ -4,7 +4,11 @@ import { sourceLogos } from "@/utils/sourceLogos";
 
 const parser = new Parser();
 
-const feedUrls = ["https://blockworks.co/feed", "https://decrypt.co/feed"];
+const feedUrls = [
+  "https://blockworks.co/feed",
+  "https://decrypt.co/feed",
+  "https://cryptoslate.com/feed",
+];
 
 export const fetchNewsFromFeeds = async () => {
   const feeds = await Promise.all(

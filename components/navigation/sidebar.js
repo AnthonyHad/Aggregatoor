@@ -7,8 +7,9 @@ import Link from "next/link";
 
 const generateLinks = (pathname) => {
   const links = [
-    { href: "/decrypt", text: "Decrypt" },
-    { href: "/blockworks", text: "Blockworks" },
+    { href: "/Decrypt", text: "Decrypt" },
+    { href: "/Blockworks", text: "Blockworks" },
+    { href: "/CryptoSlate", text: "CryptoSlate" },
   ];
 
   return links.map((link, index) => (
