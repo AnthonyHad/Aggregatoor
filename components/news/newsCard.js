@@ -21,7 +21,7 @@ const NewsCard = ({ title, link, pubDate, contentSnippet, source, logo }) => {
 
   return (
     <Link href={link} target="_blank">
-      <div className=" rounded-md  w-full h-[270px] bg-gradient-to-br from-[#4B79A1] to-[#283E51] transition ease-in-out delay-50  hover:-translate-y-2">
+      <div className=" rounded-md  w-full h-[270px] bg-gradient-to-br from-[#2b5876] to-[#4e4376]  transition ease-in-out delay-50  hover:-translate-y-2">
         <div className="flex flex-col gap-3 justify-end h-full p-4 ">
           <div className="flex items-center gap-2">
             {logo && (

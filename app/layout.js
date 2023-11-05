@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-gray-950 text-gray-300">
+    <html lang="en" className="bg-gray-900 text-gray-300">
       <body className={`${nunito.className} flex min-h-screen`}>
         <Sidebar />
         <div className="w-full overflow-hidden">

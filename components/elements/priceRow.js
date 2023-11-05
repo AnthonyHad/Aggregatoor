@@ -28,6 +28,17 @@ const PriceRow = async () => {
           />
         ))}
       </div>
+      <div className="flex mx-2 items-center space-x-4 animate-infinite">
+        {prices.map((price) => (
+          <CryptoPrice
+            key={price.ticker}
+            ticker={price.ticker}
+            image={price.image}
+            currentPrice={price.currentPrice}
+            percentChange={price.percentChange}
+          />
+        ))}
+      </div>
     </div>
   );
 };
