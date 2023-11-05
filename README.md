@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Intro
+
+I am putting everything I learned into practice with this project. I'd like to create a Web3 native NewsFeed aggregator as I saw a small gap in the market. 
+Any ideas or suggestions please feel free to contribute ! 
+
+Here is how it looks like so far:
+
+![Screenshot 2023-11-05 at 13 03 46](https://github.com/AnthonyHad/Aggregatoor/assets/57102201/7c44fd37-9e15-4020-b666-63227157bf10)
+
+
 ## Getting Started
 
 First, run the development server:
