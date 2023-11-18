@@ -14,6 +14,10 @@ const FilteredNews = async ({ params }) => {
   if (params.slug === "Blockworks") {
     params.slug = "Blockworks: News and insights about digital assets.";
   }
+
+  if (params.slug === "CoinDesk") {
+    params.slug = "CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data";
+  }
   console.log(params);
 
   return (

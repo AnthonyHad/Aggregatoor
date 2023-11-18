@@ -10,6 +10,7 @@ const generateLinks = (pathname) => {
     { href: "/Decrypt", text: "Decrypt" },
     { href: "/Blockworks", text: "Blockworks" },
     { href: "/CryptoSlate", text: "CryptoSlate" },
+    { href: "/CoinDesk", text: "CoinDesk" },
   ];
 
   return links.map((link, index) => (

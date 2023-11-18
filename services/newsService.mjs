@@ -8,6 +8,7 @@ const feedUrls = [
   "https://blockworks.co/feed",
   "https://decrypt.co/feed",
   "https://cryptoslate.com/feed",
+  "https://www.coindesk.com/arc/outboundfeeds/rss/",
 ];
 
 export const fetchNewsFromFeeds = async () => {

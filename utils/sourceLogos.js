@@ -3,4 +3,6 @@ export const sourceLogos = {
     "/logos/blockworks-logo.png",
   Decrypt: "/logos/decrypt-logo.png",
   CryptoSlate: "/logos/crypto-slate-logo.webp",
+  "CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data":
+    "/logos/CoinDesk-Logo.png",
 };
