@@ -1,5 +1,4 @@
 import Parser from "rss-parser";
-import { sourceLogos } from "@/utils/sourceLogos";
 import fs from "fs";
 
 const parser = new Parser();
@@ -24,7 +23,6 @@ export const fetchNewsFromFeeds = async () => {
           pubDate: new Date(item.pubDate).getTime(),
           contentSnippet: item.contentSnippet,
           source: feed.title,
-          logo: sourceLogos[feed.title] || "",
         };
 
         if (item.hasOwnProperty("summary")) {
@@ -42,6 +40,11 @@ export const fetchNewsFromFeeds = async () => {
   const allArticles = feeds.flat();
   const sortedArticles = allArticles.sort((a, b) => b.pubDate - a.pubDate);
 
+  fs.writeFileSync(
+    "normalizedOutput.json",
+    JSON.stringify(sortedArticles, null, 2)
+  );
+
   return sortedArticles;
 
   // return fs.writeFileSync(
@@ -50,13 +53,13 @@ export const fetchNewsFromFeeds = async () => {
   // );
 };
 
-// async function main() {
-//   try {
-//     await fetchNewsFromFeeds();
-//     console.log('Data written to output.json');
-//   } catch (error) {
-//     console.error('An error occurred:', error);
-//   }
-// }
+async function main() {
+  try {
+    await fetchNewsFromFeeds();
+    console.log("Data written to output.json");
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
 
-// main();
+main();
