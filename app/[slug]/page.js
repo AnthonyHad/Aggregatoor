@@ -4,7 +4,7 @@ import NewsCard from "@/components/news/newsCard";
 
 const FilteredNews = async ({ params }) => {
   const response = await fetch("http://localhost:3000/api/news", {
-    next: { revalidate: 3600 },
+    next: { revalidate: 300 },
   });
   const feeds = await response.json();
 
